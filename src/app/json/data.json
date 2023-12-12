@@ -1,18 +1,34 @@
 [
-    {
+  {
+    "id": 1,
+    "image": "../../assets/images/letters/alfa/alfa.svg",
+    "name": "ألفا",
+    "instruction": "و هو من الحروف المتحركة القابلة للفتح و لهذا حرف ألفا ينطق : (أ)",
+    "words": [
+      {
         "id": 1,
-        "image": "../../assets/images/letters/alfa/alfa.svg",
-        "name": "ألفا",
-        "instruction": "و هو من الحروف المتحركة القابلة للفتح و لهذا حرف ألفا ينطق : (أ)",
-        "words": [
-            {
-                "id": 1,
-                "word": "../../assets/images/letters/alfa/aminWord.svg",
-                "spelling": "أمين",
-                "meaning": "حقًا",
-                "meaningImage": "../../assets/images/letters/alfa/aminImg.png",
-                "audio": "../../assets/images/letters/alfa/alfaSpelling.mp3"
-            }
-        ]
-    }
+        "word": "../../assets/images/letters/alfa/aminWord.svg",
+        "spelling": "أمين",
+        "meaning": "حقًا",
+        "meaningImage": "../../assets/images/letters/alfa/aminImg.png",
+        "audio": "../../assets/images/letters/alfa/alfaSpelling.mp3"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "image": "../../assets/images/letters/beta/beta.svg",
+    "name": "بيتا",
+    "instruction": "و هو من الحروف المتحركة القابلة للفتح و لهذا حرف ألفا ينطق : (أ)",
+    "words": [
+      {
+        "id": 1,
+        "word": "../../assets/images/letters/alfa/aminWord.svg",
+        "spelling": "أمين",
+        "meaning": "حقًا",
+        "meaningImage": "../../assets/images/letters/alfa/aminImg.png",
+        "audio": "../../assets/images/letters/alfa/alfaSpelling.mp3"
+      }
+    ]
+  }
 ]

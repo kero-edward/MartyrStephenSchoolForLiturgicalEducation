@@ -1,28 +1,21 @@
-<section class="lettersSection">
-    <div class="container py-5">
-        <div class="textBody">
-            <div class="desc">
-                <div class="rightAngel">
-                    <img class="img-fluid" src="../../../assets/images/angelsPray.png" alt="angel pray in peace">
-                </div>
-                <p class="descText">
-                    الأبجدية القبطية هي الأحرف الأبجدية التي تشتق من الأحرف اليونانية، وتتكون الأبجدية القبطية من 32
-                    حرفًا
-                </p>
-                <div class="leftAngel">
-                    <img class="img-fluid" src="../../../assets/images/angelsPray.png" alt="angel pray in peace">
-                </div>
-            </div>
-            <p class="start py-5"> لنبدء في تعلم المزيد عن كل حرف <br> ( اضغط على الحرف الذي تريد قراءة المزيد عنه )</p>
-        </div>
-        <div class="letters d-flex py-2 px-5 my-5 gap-5" dir="ltr">
-            <div class="col-2 copticLetter gap-3" *ngFor="let letter of copticLetters"
-                [routerLink]="['/letter', letter.id]">
-                <img class="letterImg img-fluid" [src]="letter.image" alt="Alfa coptic letter image">
-                <h2 class="m-0">
-                    {{letter.name}}
-                </h2>
-            </div>
-        </div>
+<section class="lettersSection ">
+  <div class="textBody py-5 text-center">
+    <div class="container">
+      <p class="desc">
+        الأبجدية القبطية هي الأحرف الأبجدية التي تشتق من الأحرف اليونانية، وتتكون الأبجدية القبطية من 32
+        حرفًا
+      </p>
+      <p class="start my-5"> لنبدء في تعلم المزيد عن كل حرف <br> ( اضغط على الحرف الذي تريد قراءة المزيد عنه )</p>
     </div>
+  </div>
+  <div class="container">
+    <div class="letters d-flex py-2 px-5 my-5 gap-5 flex-wrap justify-content-center align-items-center" dir="ltr">
+      <div class="col-2 copticLetter gap-3" *ngFor="let letter of copticLetters" [routerLink]="['/letter', letter.id]">
+        <img class="letterImg img-fluid" [src]="letter.image" alt="Alfa coptic letter image">
+        <h2 class="m-0">
+          {{letter.name}}
+        </h2>
+      </div>
+    </div>
+  </div>
 </section>

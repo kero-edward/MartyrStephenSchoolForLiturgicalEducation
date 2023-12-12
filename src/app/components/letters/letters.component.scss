@@ -1,100 +1,72 @@
 .lettersSection {
-    background-color: #fcfcfd;
-    font-family: Noto Sans Arabic;
-    line-height: normal;
+  background-color: #f7f7f7;
+  font-family: "Noto Sans Arabic";
+
+  .textBody {
+    background-image: url("../../../assets/images/backgroundImageLight.png");
+    background-position: center;
+    font-size: 1.7rem;
     font-style: normal;
-    box-sizing: border-box;
+    line-height: normal;
 
-    .textBody {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-
-        .desc {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-
-            .rightAngel {
-                position: absolute;
-                right: 0;
-            }
-
-            .leftAngel {
-                position: absolute;
-                left: 0;
-            }
-
-            p {
-                padding: 2rem 7.5rem;
-                border-radius: 2.53906rem;
-                background-color: #150d7c;
-
-                color: #fff;
-                font-size: 1.27013rem;
-                font-weight: 900;
-                margin: 0;
-                height: fit-content;
-            }
-        }
-
-        .start {
-            color: #150d7c;
-            font-size: 1.875rem;
-            font-weight: 700;
-            line-height: 50px;
-        }
+    p.desc {
+      color: #053762;
+      font-weight: 700 !important;
     }
 
-    .letters {
-        border-right: 3px solid #150d7c;
-        border-left: 3px solid #150d7c;
-
-        .copticLetter {
-            display: flex;
-            width: 7.59569rem;
-            padding: 1rem 2.5rem;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border: 2.826px solid #150d7c;
-            background: #fccb30;
-            box-shadow: 0px 4.18088px 2.09044px 0px rgba(0, 0, 0, 0.25);
-            border-radius: 1.625rem;
-            -webkit-border-radius: 1.625rem;
-            -moz-border-radius: 1.625rem;
-            -ms-border-radius: 1.625rem;
-            -o-border-radius: 1.625rem;
-            cursor: pointer;
-            transition: all 0.2s ease-in-out;
-            -webkit-transition: all 0.2s ease-in-out;
-            -moz-transition: all 0.2s ease-in-out;
-            -ms-transition: all 0.2s ease-in-out;
-            -o-transition: all 0.2s ease-in-out;
-            
-            img {
-                width: 4.5rem;
-            }
-
-            h2 {
-                color: #0b1c3f;
-                font-size: 1.6rem;
-                font-weight: 800;
-            }
-
-            &:hover {
-                border-radius: 1.625rem;
-                border: 2.826px solid #150d7c;
-                background: #fff;
-                box-shadow: 0px 4.18088px 2.09044px 0px rgba(0, 0, 0, 0.25);
-                -webkit-border-radius: 1.625rem;
-                -moz-border-radius: 1.625rem;
-                -ms-border-radius: 1.625rem;
-                -o-border-radius: 1.625rem;
-            }
-        }
+    .start {
+      color: #565555;
+      font-weight: 500 !important;
     }
+  }
+
+  .letters {
+    border-right: 3px solid #150d7c;
+    border-left: 3px solid #150d7c;
+
+    .copticLetter {
+      display: flex;
+      width: 7.59569rem;
+      padding: 1.17763rem 0.68681rem 1.07894rem 0.70663rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 2.826px solid #150d7c;
+      background: #fccb30;
+      box-shadow: 0px 4.18088px 2.09044px 0px rgba(0, 0, 0, 0.25);
+      border-radius: 1.625rem;
+      -webkit-border-radius: 1.625rem;
+      -moz-border-radius: 1.625rem;
+      -ms-border-radius: 1.625rem;
+      -o-border-radius: 1.625rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+
+      img {
+        width: 4rem;
+        height: 3rem;
+      }
+
+      h2 {
+        color: #0b1c3f;
+        font-size: 1.6rem;
+        font-weight: 800;
+      }
+
+      &:hover {
+        border-radius: 1.625rem;
+        border: 2.826px solid #150d7c;
+        background: #fff;
+        box-shadow: 0px 4.18088px 2.09044px 0px rgba(0, 0, 0, 0.25);
+        -webkit-border-radius: 1.625rem;
+        -moz-border-radius: 1.625rem;
+        -ms-border-radius: 1.625rem;
+        -o-border-radius: 1.625rem;
+      }
+    }
+  }
 }

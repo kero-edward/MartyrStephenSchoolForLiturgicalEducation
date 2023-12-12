@@ -11,7 +11,5 @@ export class LettersComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    console.log('this.getData: ', this.copticLetters);
-  }
+  ngOnInit(): void {}
 }
