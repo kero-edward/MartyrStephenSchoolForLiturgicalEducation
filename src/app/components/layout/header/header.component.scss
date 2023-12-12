@@ -1,0 +1,71 @@
+.navbar {
+  font-family: "Noto Sans Arabic";
+  background-color: #053762;
+
+  .startLogo {
+    .schoolLogo {
+      width: 6.25rem;
+      height: 6.25rem;
+    }
+
+    .churchLogo {
+      width: 15.1875rem;
+    }
+  }
+
+  .centerLogo {
+    .crossLogo {
+      width: 5.1875rem;
+      height: 4.9375rem;
+    }
+  }
+
+  .endLogo {
+    .tranimBtn {
+      display: flex;
+      width: 12.72913rem;
+      height: 3.32625rem;
+      padding: 0.3125rem 2.46813rem 0.26375rem 2.5rem;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.625rem;
+      background-color: #0b1c3f;
+      color: #fbb03b;
+
+      p {
+        font-size: 1.31381rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        margin: 0;
+      }
+
+      img {
+        width: 1.47144rem;
+        height: 1.10356rem;
+        stroke-width: 1.682px;
+      }
+    }
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 800px) {
+  nav {
+    flex-wrap: wrap;
+
+    .startLogo {
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .centerLogo {
+      width: 100%;
+      text-align: center;
+    }
+
+    .endLogo {
+      margin-top: 15px;
+    }
+  }
+}

@@ -1,0 +1,154 @@
+.tranimSection {
+    background-color: #fcfcfd;
+    font-family: Noto Sans Arabic;
+    font-style: normal;
+    line-height: normal;
+    box-sizing: border-box;
+
+    .arrow {
+        display: flex;
+        width: 5.25rem;
+        height: 5.06769rem;
+        padding: 1.16669rem 1.255rem 1.20975rem 1.21969rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 4px solid #0b1c3f;
+        box-shadow: 0px 3.68948px 1.84474px 0px rgba(0, 0, 0, 0.25);
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+
+        img {
+            width: 2.77431rem;
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+        }
+    }
+
+    h2 {
+        color: #0b1c3f;
+        font-size: 2.5rem;
+        font-weight: 800;
+    }
+
+    .listenPhrase {
+        color: #646363;
+        font-size: 2rem;
+        font-weight: 500;
+        display: flex;
+
+        .play {
+            display: flex;
+            width: 3rem;
+            height: 3rem;
+            padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: 3px solid #0b1c3f;
+            box-shadow: 0px 3.68948px 1.84474px 0px rgba(0, 0, 0, 0.25);
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+
+            img {
+                width: 1.09556rem;
+            }
+        }
+    }
+
+    .tranim {
+        border-right: 3px solid #150d7c;
+        border-left: 3px solid #150d7c;
+
+        .tranimContainer {
+            border-radius: 1.625rem;
+            border: 3px solid #150d7c;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            -webkit-border-radius: 1.625rem;
+            -moz-border-radius: 1.625rem;
+            -ms-border-radius: 1.625rem;
+            -o-border-radius: 1.625rem;
+
+            .playTranim {
+                border-radius: 1.125rem;
+                background: #fccb30;
+                -webkit-border-radius: 1.125rem;
+                -moz-border-radius: 1.125rem;
+                -ms-border-radius: 1.125rem;
+                -o-border-radius: 1.125rem;
+                display: flex;
+                justify-content: space-between;
+
+                .trnimaName {
+                    color: #0b1c3f;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    display: flex;
+                    align-items: center;
+
+                    .listenIcon {
+                        width: 13%;
+                    }
+                }
+
+                .play {
+                    display: flex;
+                    width: 3rem;
+                    height: 3rem;
+                    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    border: 3px solid #0b1c3f;
+                    box-shadow: 0px 3.68948px 1.84474px 0px rgba(0, 0, 0, 0.25);
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    background-color: #fffefe;
+                    cursor: pointer;
+
+                    img {
+                        width: 1.09556rem;
+                    }
+                }
+
+                .pause {
+                    display: flex;
+                    width: 3rem;
+                    height: 3rem;
+                    fill: #150d7c;
+                    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    border: 3px solid #0b1c3f;
+                    box-shadow: 0px 3.68948px 1.84474px 0px rgba(0, 0, 0, 0.25);
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    background-color: #fffefe;
+                    cursor: pointer;
+
+                    svg {
+                        width: 3.69556rem;
+                    }
+                }
+            }
+        }
+
+        .line {
+            width: 83%;
+            height: 0.1875rem;
+            background: rgba(217, 217, 217, 0.5);
+        }
+    }
+}

@@ -1,0 +1,73 @@
+<section class="tranimSection">
+    <div class="container py-5">
+        <div class="arrow">
+            <a routerLink="/letters">
+                <img src="../../../assets/images/Arrow-Right.svg" alt="arrow icon">
+            </a>
+        </div>
+
+        <h2 class="pt-5 py-3">استمتع بالأستماع للترانيم :</h2>
+
+        <div class="listenPhrase pb-5">
+            اضغط على
+            &nbsp;
+            <div class="play">
+                <img class="img-fluid" src="../../../assets/images/playIcon.svg" alt="play music icon">
+            </div>
+            &nbsp;
+            للأستماع للترنيمة.
+        </div>
+
+        <div class="tranim py-3 my-5">
+            <div class="row justify-content-center">
+
+                <div class="col-10 tranimContainer p-2">
+                    <div class="playTranim py-3 px-5 align-items-center">
+
+                        <div class="trnimaName gap-5">
+                            <img class="listenIcon img-fluid" src="../../../assets/images/headphone.svg" alt="headphone icon">
+                            <p class="m-0">
+                                طبيعة الأيام
+                            </p>
+                        </div>
+
+                        <div class="d-none">
+                            <audio (ended)="audioEnded()" #ref src="../../../assets/13 طبيعة الأيام.mp3"
+                                controls></audio>
+                        </div>
+
+                        <div class="play" (click)="ref.play()" (click)="playMySong()" *ngIf="play.getValue() === false">
+                            <img class="img-fluid" src="../../../assets/images/playIcon.svg" alt="play music icon">
+                        </div>
+                        <div class="pause" (click)="ref.pause()" (click)="pauseMySong()"
+                            *ngIf="play.getValue() === true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path
+                                    d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="line my-5"></div>
+
+                <div class="col-10 tranimContainer p-2">
+                    <div class="playTranim py-3 px-5">
+
+                        <div class="trnimaName gap-5">
+                            <img class="listenIcon img-fluid" src="../../../assets/images/headphone.svg" alt="headphone icon">
+                            <p class="m-0">
+                                طبيعة الأيام
+                            </p>
+                        </div>
+
+                        <div class="play">
+                            <img src="../../../assets/images/playIcon.svg" class="img-fluid" alt="play music icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

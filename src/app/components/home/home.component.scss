@@ -1,0 +1,207 @@
+.homeSection {
+  font-family: "Noto Sans Arabic";
+  background-image: url("../../../assets/images/BackgroundImage.png");
+
+  .bodyContent {
+    .bodyText {
+      h2 {
+        color: #fff;
+        text-shadow: 0px 2.893px 2.893px rgba(0, 0, 0, 0.25);
+        font-size: 3.488rem;
+        font-style: normal;
+        font-weight: 700 !important;
+        line-height: normal;
+      }
+
+      p {
+        color: #fff;
+        font-size: 2.49144rem;
+        font-style: normal;
+        font-weight: 500 !important;
+        line-height: normal;
+      }
+
+      button {
+        display: flex;
+        width: 15.59644rem;
+        height: 3.933rem;
+        padding: 0.35456rem 4.35431rem 0.26594rem 2.52131rem;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 0.84706rem;
+        border: 2.392px solid #000;
+        background-color: #fbb03b;
+        box-shadow: 5px 5.043px 2.521px 0px rgba(0, 0, 0, 0.5);
+        color: #000;
+
+        p {
+          margin: 0;
+          color: #000;
+          font-size: 1.57581rem;
+          font-style: normal;
+          font-weight: 800 !important;
+          line-height: normal;
+        }
+
+        img {
+          width: 2.60006rem;
+          height: 2.52125rem;
+          transition: all 0.7s ease-in-out;
+          -webkit-transition: all 0.7s ease-in-out;
+          -moz-transition: all 0.7s ease-in-out;
+          -ms-transition: all 0.7s ease-in-out;
+          -o-transition: all 0.7s ease-in-out;
+        }
+
+        &:hover {
+          .arrow {
+            transform: translateX(-15px);
+            -webkit-transform: translateX(-15px);
+            -moz-transform: translateX(-15px);
+            -ms-transform: translateX(-15px);
+            -o-transform: translateX(-15px);
+          }
+        }
+      }
+
+      .copyright {
+        color: #dad9d9;
+        font-size: 1.09625rem;
+        font-style: normal;
+        font-weight: 500 !important;
+        line-height: normal;
+      }
+    }
+
+    .bodyImage {
+      background: url("../../../assets/images/schoolHomeBg.png"), #fff;
+      width: 25rem;
+      height: 25rem;
+      border-radius: 25rem;
+      -webkit-border-radius: 25rem;
+      -moz-border-radius: 25rem;
+      -ms-border-radius: 25rem;
+      -o-border-radius: 25rem;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -7px;
+        right: -7px;
+        bottom: -7px;
+        left: -7px;
+        border-radius: 25rem;
+        border: 10px solid #fbb03b;
+      }
+    }
+  }
+
+  .description {
+    background-image: url("../../../assets/images/backgroundImageLight.png");
+    background-repeat: repeat-x;
+    background-size: contain;
+  background-position: center;
+
+    .sideDesc {
+      color: #0b1c3f;
+      font-size: 1.50644rem;
+      font-style: normal;
+      font-weight: 500 !important;
+      line-height: normal;
+    }
+
+    .middleDesc {
+      color: #8f0813;
+      font-size: 1.50644rem;
+      font-style: normal;
+      font-weight: 500 !important;
+      line-height: normal;
+    }
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 992px) {
+  .homeSection {
+    .bodyContent {
+      .bodyText {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        text-align: center;
+
+        h2 {
+          font-size: 3rem;
+        }
+
+        p {
+          font-size: 2rem;
+        }
+
+        button {
+          p {
+            font-size: 1.4rem;
+          }
+
+          img {
+            height: 2.4rem;
+          }
+        }
+      }
+
+      .bodyImage {
+        width: 20rem;
+        height: 20rem;
+        background-size: cover;
+        margin-top: 25px;
+        margin: auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .homeSection {
+    .bodyContent {
+      .bodyText {
+        button {
+          width: 13.5rem;
+          height: 3.5rem;
+
+          p {
+            font-size: 1.2rem;
+          }
+
+          img {
+            width: 2rem;
+          }
+        }
+      }
+
+      .bodyImage {
+        width: 14rem;
+        height: 14rem;
+        background-size: cover;
+        margin-top: 25px;
+        margin: auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .homeSection {
+    .bodyContent {
+      .bodyImage {
+        width: 12rem;
+        height: 12rem;
+        background-size: cover;
+        margin-top: 25px;
+        margin: auto;
+      }
+    }
+  }
+}

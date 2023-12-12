@@ -1,0 +1,33 @@
+footer {
+  background-image: url("../../../../assets/images/footerBg.png");
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-position: center;
+  font-family: 'Noto Sans Arabic';
+
+  .copyright {
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500 !important;
+    line-height: normal;
+  }
+
+  .socialList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    li {
+      color: #fbb03b;
+    }
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+  footer {
+    .copyright {
+      font-size: 1rem;
+    }
+  }
+}
