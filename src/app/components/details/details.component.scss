@@ -1,140 +1,284 @@
 .letterDetails {
-    font-family: Noto Sans Arabic;
-    font-style: normal;
-    line-height: normal;
-    box-sizing: border-box;
+  font-family: "Noto Sans Arabic";
 
-    .letterInfo {
-        background: #fccb30;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  .letterInfo {
+    background-image: url("../../../assets/images/backgroundImageLight.png");
+    background-position: center;
 
-        .arrow {
-            display: flex;
-            width: 5.25rem;
-            height: 5.06769rem;
-            padding: 1.16669rem 1.255rem 1.20975rem 1.21969rem;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            border: 4px solid #0b1c3f;
-            box-shadow: 0px 3.68948px 1.84474px 0px rgba(0, 0, 0, 0.25);
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            -ms-border-radius: 50%;
-            -o-border-radius: 50%;
+    .arrow {
+      display: flex;
+      width: 5rem;
+      height: 5rem;
+      padding: 1.16669rem 1.255rem 1.20975rem 1.21969rem;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: 4px solid #0b1c3f;
+      box-shadow: 0px 3.68948px 1.84474px 0px rgba(0, 0, 0, 0.25);
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+
+      img {
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+      }
+    }
+
+    .textBody {
+      line-height: normal;
+      font-style: normal;
+
+      .imageContainer {
+        position: relative;
+
+        img {
+          width: 9.394rem;
+          height: 4.75rem;
+        }
+      }
+
+      h2 {
+        color: #0b1c3f;
+        font-size: 2.1875rem;
+        font-weight: 700 !important;
+      }
+
+      p {
+        color: #565555;
+        font-size: 1.875rem;
+        font-weight: 500 !important;
+      }
+    }
+  }
+
+  .letterExamples {
+    background-color: #f7f7f7;
+
+    .letterTable {
+      border-right: 3px solid #150d7c;
+      border-left: 3px solid #150d7c;
+      font-style: normal;
+      line-height: normal;
+
+      h3 {
+        color: #0b1c3f;
+        font-size: 2.0625rem;
+        font-weight: 700 !important;
+      }
+
+      .listenPhrase {
+        color: #565555;
+        font-size: 1.875rem;
+        font-weight: 500 !important;
+
+        img {
+          width: 2rem;
+        }
+      }
+
+      .myTable {
+        border-radius: 1.04094rem;
+        background: rgba(7, 54, 98, 0.1);
+        -webkit-border-radius: 1.04094rem;
+        -moz-border-radius: 1.04094rem;
+        -ms-border-radius: 1.04094rem;
+        -o-border-radius: 1.04094rem;
+
+        .tableHeadings {
+          background: #fff;
+          border-radius: 0.62456rem;
+          -webkit-border-radius: 0.62456rem;
+          -moz-border-radius: 0.62456rem;
+          -ms-border-radius: 0.62456rem;
+          -o-border-radius: 0.62456rem;
+
+          h4 {
+            color: #000;
+            font-size: 2.08194rem;
+            font-weight: 700 !important;
+            margin: 0;
+          }
+        }
+
+        .tableRows {
+          .tableData {
+            border-radius: 0.71994rem;
+            background: #fff;
+            -webkit-border-radius: 0.71994rem;
+            -moz-border-radius: 0.71994rem;
+            -ms-border-radius: 0.71994rem;
+            -o-border-radius: 0.71994rem;
+
+            h4.tableHeader {
+              color: #000;
+              font-size: 2.08194rem;
+              font-weight: 700 !important;
+              margin: 0;
+            }
 
             img {
-                width: 2.77431rem;
-                transform: rotate(180deg);
-                -webkit-transform: rotate(180deg);
-                -moz-transform: rotate(180deg);
-                -ms-transform: rotate(180deg);
-                -o-transform: rotate(180deg);
+              width: 5rem;
             }
+
+            .listenIcon {
+              width: 2rem;
+              cursor: pointer;
+            }
+
+            .meaningImage {
+              width: 2rem;
+            }
+
+            h4 {
+              color: #0b1c3f;
+              font-size: 2.08194rem;
+              font-weight: 700 !important;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 786px) {
+  .letterDetails {
+    .letterInfo {
+      .arrow {
+        width: 4.5rem;
+        height: 4.5rem;
+      }
+
+      .textBody {
+        .imageContainer {
+          img {
+            width: 7rem;
+            height: 4rem;
+          }
         }
 
-        .textBody {
-            h2 {
-                color: #0b1c3f;
-                font-size: 2.5rem;
-                font-weight: 700;
-            }
-
-            p {
-                color: #0b1c3f;
-                font-size: 2.5rem;
-                font-weight: 500;
-                line-height: 60px;
-            }
-
-            .imageContainer {
-                position: relative;
-
-                img {
-                    width: 80%;
-                }
-
-                .letterImage {
-                    width: 40%;
-                    position: absolute;
-                    top: 5%;
-                    right: 28%;
-                }
-            }
+        h2 {
+          font-size: 2rem;
         }
+
+        p {
+          font-size: 1.4rem;
+        }
+      }
     }
 
     .letterExamples {
-        background-color: #fcfcfd;
-
+      .letterTable {
         h3 {
-            color: #0b1c3f;
-            font-size: 2rem;
-            font-weight: 700;
+          font-size: 1.8rem;
         }
 
-        .letterTable {
-            border-right: 3px solid #150d7c;
-            border-left: 3px solid #150d7c;
+        .listenPhrase {
+          font-size: 1.4rem;
+        }
 
-            .listenPhrase {
-                color: #646363;
+        .myTable {
+          .tableHeadings {
+            h4 {
+              font-size: 1.5rem;
+            }
+          }
+
+          .tableRows {
+            .tableData {
+              .listenIcon {
+                width: 1.8rem;
+              }
+
+              .meaningImage {
+                width: 1.8rem;
+              }
+
+              h4 {
                 font-size: 1.6rem;
-                font-weight: 500;
-                display: flex;
-
-                img {
-                    width: 1.6rem;
-                }
+              }
             }
-
-            .myTable {
-                border-radius: 1.19994rem;
-                background: #f6f5f7;
-
-                .tableHeadings {
-                    border-radius: 0.71994rem;
-                    background: #fff;
-
-                    h4 {
-                        color: #000;
-                        font-size: 2rem;
-                        font-weight: 700;
-                        margin: 0;
-                    }
-                }
-
-                .tableRows {
-                    .tableData {
-                        border-radius: 0.71994rem;
-                        background: #fff;
-                        -webkit-border-radius: 0.71994rem;
-                        -moz-border-radius: 0.71994rem;
-                        -ms-border-radius: 0.71994rem;
-                        -o-border-radius: 0.71994rem;
-
-                        img {
-                            width: 5rem;
-                        }
-
-                        .listenIcon {
-                            width: 2rem;
-                            cursor: pointer;
-                        }
-
-                        .meaningImage {
-                            width: 2rem;
-                        }
-
-                        h4 {
-                            margin: 0;
-                            color: #0b1c3f;
-                            font-size: 2rem;
-                            font-weight: 700;
-                        }
-                    }
-                }
-            }
+          }
         }
+      }
     }
+  }
+}
+
+@media only screen and (max-width: 501px) {
+  .letterDetails {
+    .letterExamples {
+      .letterTable {
+        h3 {
+          font-size: 1.7rem;
+        }
+
+        .myTable {
+          .tableRows {
+            .tableData {
+              height: 4rem;
+
+              h4.tableHeader {
+                font-size: 1.5rem;
+              }
+
+              h4 {
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .letterDetails {
+    .letterExamples {
+      .letterTable {
+        .myTable {
+          .tableRows {
+            .tableData {
+              h4.tableHeader {
+                font-size: 1.3rem;
+              }
+
+              h4 {
+                font-size: 1.3rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 296px) {
+  .letterDetails {
+    .letterExamples {
+      .letterTable {
+        .myTable {
+          .tableRows {
+            .tableData {
+              h4.tableHeader {
+                font-size: 1.1rem;
+              }
+
+              h4 {
+                font-size: 1.1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

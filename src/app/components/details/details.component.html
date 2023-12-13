@@ -1,105 +1,172 @@
 <section class="letterDetails">
-    <div class="letterInfo py-5">
-        <div class="container">
-            <div class="arrow">
-                <a routerLink="/letters">
-                    <img class="img-fluid" src="../../../assets/images/Arrow-Right.svg" alt="arrow icon">
-                </a>
-            </div>
-
-            <div class="textBody pt-5 row">
-                <div class="col-md-8 d-flex flex-column justify-content-center">
-                    <h2 class="mb-5">
-                        هذا حرف {{letter.name}}
-                    </h2>
-                    <p>
-                        و هو من الحروف المتحركة القابلة للفتح <br> و لهذا حرف ألفا ينطق : (أ)
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <div class="imageContainer d-flex justify-content-center">
-                        <img class="img-fluid letterImage" [src]="letter.image" [alt]="letter.name">
-                        <img class="img-fluid" src="../../../assets/images/angelHoldLetter.png"
-                            alt="angel holding coptic letter">
-                    </div>
-                </div>
-            </div>
+  <div class="letterInfo py-5">
+    <div class="container">
+      <div class="row">
+        <div class="arrow col-md-1">
+          <a routerLink="/letters">
+            <img class="img-fluid" src="../../../assets/images/Arrow-Right.svg" alt="arrow icon">
+          </a>
         </div>
+
+        <div class="col-md-11">
+          <div class="textBody row text-center">
+            <div class="col-md-12">
+              <div class="imageContainer d-flex justify-content-center">
+                <img class="img-fluid letterImage" [src]="letter.image" [alt]="letter.name">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <h2 class="my-5">
+                هذا حرف {{letter.name}}
+              </h2>
+              <p>
+                و هو من الحروف المتحركة القابلة للفتح <br> و لهذا حرف ألفا ينطق : (أ)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <div class="letterExamples py-5">
-        <div class="container">
-            <h3 class="py-3">لنتعرف معاً على بعض الكلمات التي تحتوي على حرف ({{letter.name}}) :</h3>
-            <div class="row letterTable d-flex justify-content-center py-4 my-5">
-                <div class="col-12">
-                    <div class="listenPhrase pb-5">
-                        اضغط على
-                        &nbsp;
-                        <img class="img-fluid" src="../../../assets/images/listenIcon.svg" alt="music speaker icon">
-                        &nbsp;
-                        للأستماع لنطق الكلمة.
-                    </div>
+  <div class="letterExamples py-5">
+    <div class="container">
+      <div class="row letterTable d-flex justify-content-center pb-4 my-5 px-5">
+        <h3 class="pb-3">لنتعرف معاً على بعض الكلمات التي تحتوي على حرف ({{letter.name}}) :</h3>
+        <div>
+          <div class="col-12 listenPhrase pb-5">
+            اضغط على
+            &nbsp;
+            <img class="img-fluid" src="../../../assets/images/listenIcon.svg" alt="music speaker icon">
+            &nbsp;
+            للأستماع لنطق الكلمة.
+          </div>
 
-                    <div class="col-12 myTable px-4 py-3">
-                        <!-- table headings -->
-                        <div class="row p-3 mb-3 tableHeadings">
-                            <div class="col-2 d-flex justify-content-center">
-                                <h4>أستمع</h4>
-                            </div>
-                            <div class="col-3 d-flex justify-content-center">
-                                <h4>الكلمة</h4>
-                            </div>
-                            <div class="col-3 d-flex justify-content-center">
-                                <h4>النطق</h4>
-                            </div>
-                            <div class="col-4 d-flex justify-content-center">
-                                <h4>المعنى</h4>
-                            </div>
-                        </div>
-
-                        <!-- table rows -->
-                        <div class="row tableRows" *ngFor="let item of letter.words">
-                            <div class="col-2 d-flex justify-content-center pe-0">
-                                <div class="col-12 d-flex justify-content-center tableData p-3"
-                                    (click)="ref.play()" (click)="playMySong()" *ngIf="play.getValue() === false">
-                                    <img class="img-fluid listenIcon" src="../../../assets/images/listenIcon.svg"
-                                        alt="music speacker icon">
-                                </div>
-                                <div class="col-12 d-flex justify-content-center tableData p-3"
-                                    (click)="ref.pause()" (click)="pauseMySong()"
-                                    *ngIf="play.getValue() === true">
-                                    <img class="img-fluid listenIcon" src="../../../assets/images/playListenIcon.svg"
-                                        alt="music speacker icon">
-                                </div>
-                                <div class="d-none">
-                                    <audio (ended)="audioEnded()" #ref [src]="item.audio" controls></audio>
-                                </div>
-                            </div>
-                            <div class="col-3 d-flex justify-content-center pe-0">
-                                <div class="col-12 d-flex justify-content-center tableData p-3">
-                                    <img class="img-fluid" [src]="item.word" [alt]="letter.name">
-                                </div>
-                            </div>
-                            <div class="col-3 d-flex justify-content-center pe-0">
-                                <div class="col-12 d-flex justify-content-center tableData p-3">
-                                    <h4>{{item.spelling}}</h4>
-                                </div>
-                            </div>
-                            <div class="col-2 d-flex justify-content-center pe-0">
-                                <div class="col-12 d-flex justify-content-center tableData p-3">
-                                    <h4>{{item.meaning}}</h4>
-                                </div>
-                            </div>
-                            <div class="col-2 d-flex justify-content-center px-0">
-                                <div class="col-12 d-flex justify-content-center tableData p-3">
-                                    <img class="img-fluid meaningImage" [src]="item.meaningImage" [alt]="letter.name">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="col-12 myTable px-4 py-3" *ngIf="this.screenWidth > 500">
+            <!-- table headings -->
+            <div class="row p-3 mb-3 tableHeadings">
+              <div class="col-2 d-flex justify-content-center">
+                <h4>أستمع</h4>
+              </div>
+              <div class="col-3 d-flex justify-content-center">
+                <h4>الكلمة</h4>
+              </div>
+              <div class="col-3 d-flex justify-content-center">
+                <h4>النطق</h4>
+              </div>
+              <div class="col-4 d-flex justify-content-center">
+                <h4>المعنى</h4>
+              </div>
             </div>
 
+            <!-- table rows -->
+            <div class="row tableRows" *ngFor="let item of letter.words">
+              <div class="col-2 d-flex justify-content-center pe-0">
+                <div class="col-12 d-flex justify-content-center tableData p-3" (click)="ref.play()"
+                  (click)="playMySong()" *ngIf="play.getValue() === false">
+                  <img class="img-fluid listenIcon" src="../../../assets/images/listenIcon.svg"
+                    alt="music speacker icon">
+                </div>
+                <div class="col-12 d-flex justify-content-center tableData p-3" (click)="ref.pause()"
+                  (click)="pauseMySong()" *ngIf="play.getValue() === true">
+                  <img class="img-fluid listenIcon" src="../../../assets/images/playListenIcon.svg"
+                    alt="music speacker icon">
+                </div>
+                <div class="d-none">
+                  <audio (ended)="audioEnded()" #ref [src]="item.audio" controls></audio>
+                </div>
+              </div>
+              <div class="col-3 d-flex justify-content-center pe-0">
+                <div class="col-12 d-flex justify-content-center tableData p-3">
+                  <img class="img-fluid" [src]="item.word" [alt]="letter.name">
+                </div>
+              </div>
+              <div class="col-3 d-flex justify-content-center pe-0">
+                <div class="col-12 d-flex justify-content-center tableData p-3">
+                  <h4>{{item.spelling}}</h4>
+                </div>
+              </div>
+              <div class="col-2 d-flex justify-content-center pe-0">
+                <div class="col-12 d-flex justify-content-center tableData p-3">
+                  <h4>{{item.meaning}}</h4>
+                </div>
+              </div>
+              <div class="col-2 d-flex justify-content-center px-0">
+                <div class="col-12 d-flex justify-content-center tableData p-3">
+                  <img class="img-fluid meaningImage" [src]="item.meaningImage" [alt]="letter.name">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="myTable px-4 py-3 row justify-content-center align-items-start" *ngIf="this.screenWidth < 500">
+            <!-- table headings -->
+            <div class="col-6 tableRows ps-0">
+              <div class="d-flex justify-content-center">
+                <div class="col-12 d-flex justify-content-center align-items-center tableData p-3">
+                  <h4 class="tableHeader">أستمع</h4>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mt-3">
+                <div class="col-12 d-flex justify-content-center align-items-center tableData p-3">
+                  <h4 class="tableHeader">الكلمة</h4>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mt-3">
+                <div class="col-12 d-flex justify-content-center align-items-center tableData p-3">
+                  <h4 class="tableHeader">النطق</h4>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mt-3">
+                <div class="col-12 d-flex justify-content-center align-items-center tableData p-3">
+                  <h4 class="tableHeader">المعنى</h4>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- table rows -->
+            <div class="col-6 tableRows ps-0" *ngFor="let item of letter.words">
+              <div class="d-flex justify-content-center">
+                <div class="col-12 d-flex justify-content-cente tableData p-3" (click)="ref.play()"
+                  (click)="playMySong()" *ngIf="play.getValue() === false">
+                  <img class="img-fluid listenIcon" src="../../../assets/images/listenIcon.svg"
+                    alt="music speacker icon">
+                </div>
+                <div class="col-12 d-flex justify-content-center tableData p-3" (click)="ref.pause()"
+                  (click)="pauseMySong()" *ngIf="play.getValue() === true">
+                  <img class="img-fluid listenIcon" src="../../../assets/images/playListenIcon.svg"
+                    alt="music speacker icon">
+                </div>
+                <div class="d-none">
+                  <audio (ended)="audioEnded()" #ref [src]="item.audio" controls></audio>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mt-3">
+                <div class="col-12 d-flex justify-content-center tableData p-3">
+                  <img class="img-fluid" [src]="item.word" [alt]="letter.name">
+                </div>
+              </div>
+              <div class="d-flex justify-content-center align-items-center mt-3">
+                <div class="col-12 d-flex justify-content-center align-items-center tableData p-3">
+                  <h4>{{item.spelling}}</h4>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center align-items-center mt-3">
+                <div class="col-12 d-flex justify-content-center align-items-center tableData p-3">
+                  <h4>{{item.meaning}}</h4>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mt-3">
+                <div class="col-12 d-flex justify-content-center tableData p-3">
+                  <img class="img-fluid meaningImage" [src]="item.meaningImage" [alt]="letter.name">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
     </div>
+  </div>
 </section>
